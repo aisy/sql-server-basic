@@ -126,7 +126,7 @@ Kemudian akan muncul halaman baru yang menampilkan form pengisian table :
 
 Isi  nama kolom pada `Column Name` , Tipe data pada `Data type` dan centang `Allow Nulls` apabila data tersebut diijinkan untuk kosong, dan untuk menambah kolom baru form akan membuat baris baru jika sudah mengisi kolom sebelumnya. Jadi pastika selesaikan pembuatan kolom lalu bisa lanjut seperti ini :
 
-<img src="mg\mengisi_form_table.png" alt="mengisi form table"/>
+<img src="img\mengisi_form_table.png" alt="mengisi form table"/>
 
 Tidak lupa kita set kolom `id` sebagai `Primary key` dengan cara `klik kanan kolom id` pada form tersebut lalu pilih `Set Primary Key`, dan Jika sudah di set maka akan ada `icon kunci` disebelah `kolom id` :
 
@@ -326,7 +326,7 @@ Kenapa kita harus memecah kolom `merek` menjadi table? hal ini dilakukan agar da
 
 Namun sebelum itu kita harus menghapus table `handphone` terlebih dahulu mengingat di table tersebut masih memiliki kolom merek. Cara menghapus tablenya kita ke `folder Table` pada toolbar sebelah kiri lalu klik kanan `dbo.handphone` pilih `delete`
 
-<img src="\img\hapus_table.png" alt="hapus table" style="zoom:50%;" />
+<img src="img\hapus_table.png" alt="hapus table" style="zoom:50%;" />
 
 Setelah dihapus kita akan membuat 2 table dengan perinta SQL seperti dibawah ini :
 
