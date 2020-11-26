@@ -39,9 +39,8 @@ Langkah pertama setelah instalsi adalah membuat database, karena ini akan menjad
 
 1. Pada tollbar menu pada sebelah kiri klik kanan pada `folder database`  lalu pilih `New Database`
 
-   ![membuat database](img\membuat_database.png)
+   <img src="img\membuat_database.png" alt="membuat database"/>
 
-   
 
 2. Kemudian akan muncul dialog baru, pada form `Database name` isi nama `database` yang diinginkan lalu klik `ok` 
 
@@ -51,8 +50,7 @@ Langkah pertama setelah instalsi adalah membuat database, karena ini akan menjad
 
 3. Maka database yang sudah dibuat akan muncul pada list `folder database` 
 
-   ![list database](img\list_database.png)
-
+   <img src="img\list_database.png" alt="list database"/>
 
 
 > Jika Database tidak muncuk silahkan klik kanan `folder database` lalu pilih `refresh` jika tidak silahkan restart aplikasi SQL servernya
@@ -120,19 +118,19 @@ Kita membutuhkan kode unik untuk memberikan identitas meskipun `Nama Handphone` 
 
 Langkah selanjutnya adalah kita buat `Table handphone` di SQL server dengan memilih `folder Database` yang sebelumnya kita buat lalu `klik kanan pada folder Table` :
 
-![membuat table](img\membuat_table.png)
+<img src="img\membuat_table.png" alt="membuat table"/>
 
 Kemudian akan muncul halaman baru yang menampilkan form pengisian table : 
 
-![form table](img\form_table.png)
+<img src="img\form_table.png" alt="form table"/>
 
 Isi  nama kolom pada `Column Name` , Tipe data pada `Data type` dan centang `Allow Nulls` apabila data tersebut diijinkan untuk kosong, dan untuk menambah kolom baru form akan membuat baris baru jika sudah mengisi kolom sebelumnya. Jadi pastika selesaikan pembuatan kolom lalu bisa lanjut seperti ini :
 
-![mengisi form table](img\mengisi_form_table.png)
+<img src="mg\mengisi_form_table.png" alt="mengisi form table"/>
 
 Tidak lupa kita set kolom `id` sebagai `Primary key` dengan cara `klik kanan kolom id` pada form tersebut lalu pilih `Set Primary Key`, dan Jika sudah di set maka akan ada `icon kunci` disebelah `kolom id` :
 
-![set primary key](img\set_primary_key.png)
+<img src="img\set_primary_key.png" alt="set primary key"/>
 
 Jika sudah kita tinggal menyimpan table tersebut dengan cara tekan `ctrl+s` pada keyboard, kemudian akan muncul form untuk menamai table, kita isi dengan nama `handphone` 
 
