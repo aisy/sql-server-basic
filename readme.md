@@ -6,18 +6,20 @@ Untuk bisa menggunakan SQL server tentunya kita harus paham dan familiar dengan 
 
 ## Table of content
 
-- [Instalasi SQL server](#instalasi-sql-server)
-- [Membuat Database](#membuat-database)
-- [Membuat Table](#membuat-table)
-- [Perintah SQL](#perintah-sql-mengelola-data)
-  - [Menambah data pada Table](##menambah-data-pada-table)
-  - [Mengubah data pada Table](##mengubah-data-pada-table)
-  - [Menghapus data pada Table](##menghapus-data-pada-table)
-  - [Menampilkan data pada Table](##menampilkan-data-pada-table)
-    - [Menampilkan seluruh data](###menampilkan-seluruh-data)
-    - [Menampilkan semua data dengan filter kolom](###menampilkan-semua-data-dengan-filter-kolom)
-    - [Menampilkan data berdasarkan urutan dari kolom](###menampilkan-data-berdasarkan-urutan-dari-kolom)
-  - [Menampilkan data pada 2 Table](##menampilkan-data-pada-2-table-yang-berbeda)
+- [SQL server Immediately](#sql-server-immediately)
+	- [Table of content](#table-of-content)
+	- [Instalasi SQL server](#instalasi-sql-server)
+	- [Membuat Database](#membuat-database)
+	- [Membuat Table](#membuat-table)
+	- [Perintah SQL mengelola data](#perintah-sql-mengelola-data)
+		- [Menambah data pada Table](#menambah-data-pada-table)
+		- [Mengubah data pada Table](#mengubah-data-pada-table)
+		- [Menghapus data pada Table](#menghapus-data-pada-table)
+		- [Menampilkan data pada Table](#menampilkan-data-pada-table)
+			- [Menampilkan seluruh data](#menampilkan-seluruh-data)
+			- [Menampilkan semua data dengan filter kolom](#menampilkan-semua-data-dengan-filter-kolom)
+			- [Menampilkan data berdasarkan urutan dari kolom](#menampilkan-data-berdasarkan-urutan-dari-kolom)
+		- [Menampilkan data pada 2 Table yang berbeda](#menampilkan-data-pada-2-table-yang-berbeda)
 
 ----
 
@@ -81,16 +83,16 @@ Table adalah sekumpulan data dari `object` entah itu `object mati` atau `object 
 
 Atribute yang ada diatas akan menjadi kolom pada Table dan akan disimpan di dalam database, namun setiap kolom Table akan memiliki `tipe data` yang mempresentasikan atribut/kolom bertipe apa, secara umum ada beberapa tipe data yang digunakan :
 
-| Tipe Data  | Keterangan                                                   |
-| ---------- | ------------------------------------------------------------ |
-| `int`      | tipe data untuk menyimpan dalam bentuk angka                 |
-| `float`    | tipe data untuk menyimpan dalam bentuk angka koma            |
-| `char`     | tipe data untuk menyimpan dalam bentuk text dengan ukuran tetap |
-| `varchar`  | tipe data untuk menyimpan dalam bentuk text dengan ukuran dinamis |
-| `text`     | tipe data untuk menyimpan dalam bentuk text namun dengan konten yang banyak (biasanya untuk artikel) |
-| `boolean`  | tipe data untuk menyimpan dalam bentuk nilai `true` atau `false` |
-| `date`     | tipe data untuk menyimpan dalam bentuk tanggal dengan format Tahun-Bulan-Tanggal(YYYY-MM-DD) |
-| `time`     | tipe data untuk menyimpan dalam bentuk waktu dengan format Jam:Menit:Detik(hh-mm-ss) |
+| Tipe Data  | Keterangan                                                                                                                      |
+| ---------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| `int`      | tipe data untuk menyimpan dalam bentuk angka                                                                                    |
+| `float`    | tipe data untuk menyimpan dalam bentuk angka koma                                                                               |
+| `char`     | tipe data untuk menyimpan dalam bentuk text dengan ukuran tetap                                                                 |
+| `varchar`  | tipe data untuk menyimpan dalam bentuk text dengan ukuran dinamis                                                               |
+| `text`     | tipe data untuk menyimpan dalam bentuk text namun dengan konten yang banyak (biasanya untuk artikel)                            |
+| `boolean`  | tipe data untuk menyimpan dalam bentuk nilai `true` atau `false`                                                                |
+| `date`     | tipe data untuk menyimpan dalam bentuk tanggal dengan format Tahun-Bulan-Tanggal(YYYY-MM-DD)                                    |
+| `time`     | tipe data untuk menyimpan dalam bentuk waktu dengan format Jam:Menit:Detik(hh-mm-ss)                                            |
 | `datetime` | tipe data untuk menyimpan dalam bentuk tanggal dan waktu dengan format Tahun-Bulan-Tanggal Jam:Menit:Detik(YYYY-MM-DD hh:mm:ss) |
 
 Jadi dari kasus Handpone diatas kita bisa mendekarasikan `tipe data` pada atribut yang ada, sehingga seperti ini :
@@ -152,7 +154,7 @@ create table nama_table(
 create table handphone(
 	id int primary key,
 	nama_handphone varchar(50),
-	id_merek int,
+	merek varchar(50),
 	ukuran_layar float,
 	ukuran_baterai int,
 	nama_processor varchar(50),
@@ -284,12 +286,24 @@ select * from handphone where merek='Samsung' and ukuran_layar='4.7';
 Terkadang selain filter kita membutuhkan pencarian juga bukan? `misalkan kita mau mencari kata yang berhubungan dengan kata "samsung"` kita bisa menggunakan `like`, namun menggunakan `like` ini kita membutuhkan `where` dan kita juga harus menambahkan karakter pengganti seperti :
 
 -  `%` Tanda persen mewakili nol, satu, atau beberapa karakter
--  
+-  `_` Tanda underscore mereprentasikan satu karakter
 
 ```sql
 select * from nama_table where nama_kolom like pola
 
 /* contohnya */
+
+/* mencari kata yang dengan awalan `S` */
+select * from handphone where merek like 'S%';
+
+/* mencari kata yang dengan akhiran `S` */
+select * from handphone where merek like '%S';
+
+/* mencari kata `S` yang ada di tengah-tengah */
+select * from handphone where merek like '%S%';
+
+/* mencari kata pada huruf kedua yang berhubungan dengan huruf 'a' */
+select * from handphone where merek like '_a%';
 
 ```
 
