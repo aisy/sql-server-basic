@@ -120,23 +120,23 @@ Kita membutuhkan kode unik untuk memberikan identitas meskipun `Nama Handphone` 
 
 Langkah selanjutnya adalah kita buat `Table handphone` di SQL server dengan memilih `folder Database` yang sebelumnya kita buat lalu `klik kanan pada folder Table` :
 
-![membuat table](\img\membuat_table.png)
+![membuat table](img\membuat_table.png)
 
 Kemudian akan muncul halaman baru yang menampilkan form pengisian table : 
 
-![form table](\img\form_table.png)
+![form table](img\form_table.png)
 
 Isi  nama kolom pada `Column Name` , Tipe data pada `Data type` dan centang `Allow Nulls` apabila data tersebut diijinkan untuk kosong, dan untuk menambah kolom baru form akan membuat baris baru jika sudah mengisi kolom sebelumnya. Jadi pastika selesaikan pembuatan kolom lalu bisa lanjut seperti ini :
 
-![mengisi form table](\img\mengisi_form_table.png)
+![mengisi form table](img\mengisi_form_table.png)
 
 Tidak lupa kita set kolom `id` sebagai `Primary key` dengan cara `klik kanan kolom id` pada form tersebut lalu pilih `Set Primary Key`, dan Jika sudah di set maka akan ada `icon kunci` disebelah `kolom id` :
 
-![set primary key](\img\set_primary_key.png)
+![set primary key](img\set_primary_key.png)
 
 Jika sudah kita tinggal menyimpan table tersebut dengan cara tekan `ctrl+s` pada keyboard, kemudian akan muncul form untuk menamai table, kita isi dengan nama `handphone` 
 
-<img src="\img\menyimpan_tabel.png" style="zoom:60%;" />
+<img src="img\menyimpan_tabel.png" style="zoom:60%;" />
 
 Jika sudah kita `klik OK` lalu nama table akan mucul di list `folder Table`.
 
